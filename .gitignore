@@ -1,0 +1,11 @@
+build
+target
+
+# Intellij
+*.iml
+*.ipr
+*.iws
+
+# Mac
+.DS_Store
+
