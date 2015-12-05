@@ -23,7 +23,7 @@ SELECT name FROM some_table WHERE foo=X ORDER BY bar
 If ``bar`` field is unique in such a query (and corresponding index exists for ``foo`` and ``bar`` fields) the following can be used as an alternative to the ``offset-limit`` query:
 
 ```sql
-SELECT name FROM some_table WHERE foo=X AND bar=PREVIOUS_VALUE_OF_BAR ORDER BY bar LIMIT m
+SELECT name FROM some_table WHERE foo=X AND bar>PREVIOUS_VALUE_OF_BAR ORDER BY bar LIMIT m
 ```
 
 The query above uses previous value of ``bar`` fetched by previous select. For the first select that value would be ``NULL``.
